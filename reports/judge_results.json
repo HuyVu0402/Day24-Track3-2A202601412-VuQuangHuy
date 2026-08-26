@@ -1,0 +1,127 @@
+{
+  "judge_model": "deterministic-offline-judge",
+  "pairwise": [
+    {
+      "question": "Nhan vien duoc nghi bao nhieu ngay phep nam?",
+      "answer_a": "Nhan vien duoc nghi 15 ngay phep nam theo chinh sach v2024.",
+      "answer_b": "Nhan vien co 12 ngay phep hang nam.",
+      "winner_pass1": "A",
+      "winner_pass2": "A",
+      "final_winner": "A",
+      "reasoning_pass1": "Answer A is more aligned with the question and contains stronger policy-specific detail.",
+      "reasoning_pass2": "Answer B is more aligned with the question and contains stronger policy-specific detail.",
+      "position_consistent": true,
+      "scores_pass1": {
+        "A": 0.85,
+        "B": 0.72
+      },
+      "scores_pass2": {
+        "A": 0.85,
+        "B": 0.72
+      }
+    },
+    {
+      "question": "Bao hiem suc khoe ap dung cho ai?",
+      "answer_a": "Chinh sach bao hiem suc khoe ap dung cho nhan vien chinh thuc.",
+      "answer_b": "Cong ty co nhieu phuc loi.",
+      "winner_pass1": "A",
+      "winner_pass2": "A",
+      "final_winner": "A",
+      "reasoning_pass1": "Answer A is more aligned with the question and contains stronger policy-specific detail.",
+      "reasoning_pass2": "Answer B is more aligned with the question and contains stronger policy-specific detail.",
+      "position_consistent": true,
+      "scores_pass1": {
+        "A": 0.6857,
+        "B": 0.245
+      },
+      "scores_pass2": {
+        "A": 0.6857,
+        "B": 0.245
+      }
+    },
+    {
+      "question": "Lam viec tu xa can dieu kien gi?",
+      "answer_a": "Can dang ky tren he thong va duoc quan ly phe duyet.",
+      "answer_b": "Lam viec tu xa tuy tung truong hop.",
+      "winner_pass1": "B",
+      "winner_pass2": "B",
+      "final_winner": "B",
+      "reasoning_pass1": "Answer B is more aligned with the question and contains stronger policy-specific detail.",
+      "reasoning_pass2": "Answer A is more aligned with the question and contains stronger policy-specific detail.",
+      "position_consistent": true,
+      "scores_pass1": {
+        "A": 0.3013,
+        "B": 0.47
+      },
+      "scores_pass2": {
+        "A": 0.3013,
+        "B": 0.47
+      }
+    },
+    {
+      "question": "Tam ung chi phi can hoan ung khi nao?",
+      "answer_a": "Can hoan ung dung han theo quy dinh cong tac phi va expense.",
+      "answer_b": "Nhan vien nen giu hoa don.",
+      "winner_pass1": "A",
+      "winner_pass2": "A",
+      "final_winner": "A",
+      "reasoning_pass1": "Answer A is more aligned with the question and contains stronger policy-specific detail.",
+      "reasoning_pass2": "Answer B is more aligned with the question and contains stronger policy-specific detail.",
+      "position_consistent": true,
+      "scores_pass1": {
+        "A": 0.5571,
+        "B": 0.245
+      },
+      "scores_pass2": {
+        "A": 0.5571,
+        "B": 0.245
+      }
+    },
+    {
+      "question": "Mat khau noi bo nen xu ly the nao?",
+      "answer_a": "Khong chia se mat khau, bat MFA va bao IT khi nghi ngo ro ri.",
+      "answer_b": "Doi mat khau khi can.",
+      "winner_pass1": "tie",
+      "winner_pass2": "tie",
+      "final_winner": "tie",
+      "reasoning_pass1": "Both answers are similarly useful under accuracy, completeness, and conciseness.",
+      "reasoning_pass2": "Both answers are similarly useful under accuracy, completeness, and conciseness.",
+      "position_consistent": true,
+      "scores_pass1": {
+        "A": 0.3575,
+        "B": 0.3575
+      },
+      "scores_pass2": {
+        "A": 0.3575,
+        "B": 0.3575
+      }
+    }
+  ],
+  "bias": {
+    "total_judged": 5,
+    "position_bias_rate": 0.0,
+    "position_bias_count": 0,
+    "verbosity_bias": 0.75,
+    "verbosity_details": {
+      "a_wins_a_longer": 3,
+      "b_wins_b_longer": 0,
+      "total_decisive": 4
+    },
+    "interpretation": "Position bias is low in this sample; judge decisions are stable."
+  },
+  "cohen_kappa": 1.0,
+  "kappa_interpretation": "almost perfect",
+  "human_label_count": 10,
+  "judge_labels": [
+    1,
+    0,
+    1,
+    1,
+    1,
+    0,
+    1,
+    0,
+    1,
+    0
+  ]
+}

@@ -1,0 +1,158 @@
+{
+  "total_questions": 50,
+  "per_distribution": {
+    "factual": {
+      "count": 20,
+      "faithfulness": 0.8187,
+      "answer_relevancy": 0.7962,
+      "context_precision": 0.9,
+      "context_recall": 0.889,
+      "avg_score": 0.851
+    },
+    "multi_hop": {
+      "count": 20,
+      "faithfulness": 0.8284,
+      "answer_relevancy": 0.5436,
+      "context_precision": 0.8333,
+      "context_recall": 0.5758,
+      "avg_score": 0.6953
+    },
+    "adversarial": {
+      "count": 10,
+      "faithfulness": 0.7908,
+      "answer_relevancy": 0.5019,
+      "context_precision": 0.5667,
+      "context_recall": 0.4624,
+      "avg_score": 0.5804
+    }
+  },
+  "failure_clusters": {
+    "matrix": {
+      "faithfulness": {
+        "factual": 7,
+        "multi_hop": 1,
+        "adversarial": 0
+      },
+      "context_recall": {
+        "factual": 1,
+        "multi_hop": 10,
+        "adversarial": 6
+      },
+      "context_precision": {
+        "factual": 3,
+        "multi_hop": 2,
+        "adversarial": 3
+      },
+      "answer_relevancy": {
+        "factual": 9,
+        "multi_hop": 7,
+        "adversarial": 1
+      }
+    },
+    "dominant_failure_distribution": "factual",
+    "dominant_failure_metric": "context_recall",
+    "insight": "factual has the most weakest-metric cases. The dominant weak metric is context_recall; recommended fix: Improve chunking, hybrid search coverage, or parent retrieval."
+  },
+  "bottom_10": [
+    {
+      "rank": 1,
+      "question_id": 44,
+      "distribution": "adversarial",
+      "question": "Bao lâu phải đổi mật khẩu một lần?",
+      "avg_score": 0.3459,
+      "worst_metric": "context_precision",
+      "diagnosis": "Too many irrelevant chunks",
+      "suggested_fix": "Add stronger reranking and metadata/version filters"
+    },
+    {
+      "rank": 2,
+      "question_id": 50,
+      "distribution": "adversarial",
+      "question": "Nhân viên Manager có thể dùng VPN cá nhân (như NordVPN) khi WFH để tăng bảo mật thêm không?",
+      "avg_score": 0.4069,
+      "worst_metric": "answer_relevancy",
+      "diagnosis": "Answer does not match question",
+      "suggested_fix": "Improve query-focused answer synthesis"
+    },
+    {
+      "rank": 3,
+      "question_id": 22,
+      "distribution": "multi_hop",
+      "question": "Nếu cần mua một chiếc laptop 30 triệu cho nhân viên mới, ai phê duyệt và cần gì từ phòng CNTT?",
+      "avg_score": 0.4233,
+      "worst_metric": "answer_relevancy",
+      "diagnosis": "Answer does not match question",
+      "suggested_fix": "Improve query-focused answer synthesis"
+    },
+    {
+      "rank": 4,
+      "question_id": 41,
+      "distribution": "adversarial",
+      "question": "Nhân viên được nghỉ bao nhiêu ngày phép năm?",
+      "avg_score": 0.4613,
+      "worst_metric": "context_recall",
+      "diagnosis": "Missing relevant chunks",
+      "suggested_fix": "Improve chunking, hybrid search coverage, or parent retrieval"
+    },
+    {
+      "rank": 5,
+      "question_id": 40,
+      "distribution": "multi_hop",
+      "question": "Nhân viên thử việc tháng thứ 3 phát hiện vi phạm bảo mật. Họ nên và không nên làm gì theo chính sách?",
+      "avg_score": 0.4694,
+      "worst_metric": "answer_relevancy",
+      "diagnosis": "Answer does not match question",
+      "suggested_fix": "Improve query-focused answer synthesis"
+    },
+    {
+      "rank": 6,
+      "question_id": 34,
+      "distribution": "multi_hop",
+      "question": "Nhân viên tạm ứng 4 triệu và một nhân viên khác tạm ứng 7 triệu: quy trình phê duyệt khác nhau thế nào?",
+      "avg_score": 0.5116,
+      "worst_metric": "context_recall",
+      "diagnosis": "Missing relevant chunks",
+      "suggested_fix": "Improve chunking, hybrid search coverage, or parent retrieval"
+    },
+    {
+      "rank": 7,
+      "question_id": 48,
+      "distribution": "adversarial",
+      "question": "Nhân viên thử việc có được hưởng bảo hiểm sức khỏe PVI không?",
+      "avg_score": 0.5337,
+      "worst_metric": "context_recall",
+      "diagnosis": "Missing relevant chunks",
+      "suggested_fix": "Improve chunking, hybrid search coverage, or parent retrieval"
+    },
+    {
+      "rank": 8,
+      "question_id": 45,
+      "distribution": "adversarial",
+      "question": "Có cần kích hoạt xác thực đa yếu tố (MFA) không?",
+      "avg_score": 0.5448,
+      "worst_metric": "context_precision",
+      "diagnosis": "Too many irrelevant chunks",
+      "suggested_fix": "Add stronger reranking and metadata/version filters"
+    },
+    {
+      "rank": 9,
+      "question_id": 39,
+      "distribution": "multi_hop",
+      "question": "So sánh yêu cầu mật khẩu giữa policy v1.0 và v2.0 về độ dài tối thiểu, thời hạn đổi và MFA.",
+      "avg_score": 0.5614,
+      "worst_metric": "context_recall",
+      "diagnosis": "Missing relevant chunks",
+      "suggested_fix": "Improve chunking, hybrid search coverage, or parent retrieval"
+    },
+    {
+      "rank": 10,
+      "question_id": 43,
+      "distribution": "adversarial",
+      "question": "Mật khẩu phải có tối thiểu bao nhiêu ký tự?",
+      "avg_score": 0.5947,
+      "worst_metric": "context_recall",
+      "diagnosis": "Missing relevant chunks",
+      "suggested_fix": "Improve chunking, hybrid search coverage, or parent retrieval"
+    }
+  ]
+}
